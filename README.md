@@ -1,13 +1,10 @@
 # Perlin-Mouse-Simulator
 
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-
 
 A Python application that simulates human-like mouse movement from a starting point (A) to an ending point (B) on the screen. The movement is influenced by Perlin noise to create a more natural, less robotic path. The application features a Tkinter-based GUI for real-time visualization of the noise field, the path, and for configuring simulation parameters. The actual system mouse cursor is controlled using PyAutoGUI.
 
 ![Screenshot Placeholder](https://via.placeholder.com/700x400.png?text=Add+a+Screenshot+or+GIF+of+the+App+Here!)
-
 
 ## Features
 
@@ -18,13 +15,14 @@ A Python application that simulates human-like mouse movement from a starting po
     *   Display start (A) and end (B) points.
     *   Draw the simulated mouse path in real-time.
     *   Configure parameters like noise scale, speed, jitter, deviation, and window size.
-*   **Modular Code Structure:** Organized into `perlin_noise.py`, `app_gui.py`, and `main.py` for better maintainability.
+*   **Modular Code Structure:** Organized into `perlin_noise.py`, `app_gui.py`, and `main.py` within an `src/` directory for better maintainability.
 *   **Configurable Parameters:** Adjust various aspects of the simulation via the GUI.
 *   **Non-Blocking Simulation:** Mouse movement simulation runs in a separate thread to keep the GUI responsive.
 
 ## Requirements
 
 *   Python 3.7+
+*   Conda (for environment management)
 *   Tkinter (usually included with Python standard library)
 *   Pillow (PIL)
 *   NumPy
@@ -38,26 +36,27 @@ A Python application that simulates human-like mouse movement from a starting po
     cd Perlin-Mouse-Simulato
     ```
 
-2.  **Create a virtual environment (recommended):**
+2.  **Create and activate a Conda virtual environment (recommended):**
     ```bash
-    python -m venv venv
-    # On Windows
-    venv\Scripts\activate
-    # On macOS/Linux
-    source venv/bin/activate
+    conda create --name pms_env python=3.9  # You can choose your Python version
+    conda activate pms_env
     ```
 
 3.  **Install dependencies:**
+    It's recommended to install PyAutoGUI via pip even in a Conda environment for the latest versions or if Conda channels are problematic. Other packages can be installed via Conda or pip.
     ```bash
     pip install -r requirements.txt
+    # Or, if you prefer to install main packages via conda:
+    # conda install pillow numpy
+    # pip install pyautogui
     ```
 
 ## Usage
 
-Run the main application script:
+Run the main application script from the root directory of the project:
 
 ```bash
-python main.py
+python src/main.py
 ```
 
 This will launch the Tkinter GUI.
@@ -71,13 +70,14 @@ This will launch the Tkinter GUI.
 ## Project Structure
 
 ```
-perlin-mouse-simulator/
-├── perlin_noise.py     # Contains the Perlin class for noise generation
-├── app_gui.py          # Contains the App class for GUI and simulation logic
-├── main.py             # Main script to launch the application
-├── requirements.txt    # Project dependencies
-├── LICENSE             # Project license (MIT)
-└── README.md           # This file
+Perlin-Mouse-Simulato/
+├── src/
+│   ├── perlin_noise.py     # Contains the Perlin class for noise generation
+│   ├── app_gui.py          # Contains the App class for GUI and simulation logic
+│   └── main.py             # Main script to launch the application
+├── requirements.txt        # Project dependencies
+├── LICENSE                 # Project license (MIT)
+└── README.md               # This file
 ```
 
 ## Configuration Parameters
@@ -98,12 +98,6 @@ The following parameters can be configured through the GUI:
 *   [ ] Option to save/load configurations.
 *   [ ] Click on canvas to set A and B points.
 
-*   [ ] 
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Acknowledgements
-
-*   The Perlin noise algorithm.
-*   Contributors to the awesome libraries used: Tkinter, Pillow, NumPy, PyAutoGUI.
