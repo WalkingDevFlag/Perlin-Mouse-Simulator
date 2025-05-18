@@ -7,7 +7,7 @@
 A Python application that simulates human-like mouse movement from a starting point (A) to an ending point (B) on the screen. The movement is influenced by Perlin noise to create a more natural, less robotic path. The application features a Tkinter-based GUI for real-time visualization of the noise field, the path, and for configuring simulation parameters. The actual system mouse cursor is controlled using PyAutoGUI.
 
 ![Screenshot Placeholder](https://via.placeholder.com/700x400.png?text=Add+a+Screenshot+or+GIF+of+the+App+Here!)
-*(Replace the placeholder above with an actual screenshot or GIF of your application in action!)*
+
 
 ## Features
 
