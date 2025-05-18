@@ -15,9 +15,7 @@ A Python application that simulates human-like mouse movement from a starting po
     *   Display start (A) and end (B) points.
     *   Draw the simulated mouse path in real-time.
     *   Configure parameters like noise scale, speed, jitter, deviation, and window size.
-*   **Modular Code Structure:** Organized into `perlin_noise.py`, `app_gui.py`, and `main.py` within an `src/` directory for better maintainability.
 *   **Configurable Parameters:** Adjust various aspects of the simulation via the GUI.
-*   **Non-Blocking Simulation:** Mouse movement simulation runs in a separate thread to keep the GUI responsive.
 
 ## Requirements
 
