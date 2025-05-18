@@ -32,13 +32,13 @@ A Python application that simulates human-like mouse movement from a starting po
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/WalkingDevFlag/Perlin-Mouse-Simulato.git
-    cd Perlin-Mouse-Simulato
+    git clone https://github.com/WalkingDevFlag/Perlin-Mouse-Simulator.git
+    cd Perlin-Mouse-Simulator
     ```
 
 2.  **Create and activate a Conda virtual environment (recommended):**
     ```bash
-    conda create --name pms_env python=3.9  # You can choose your Python version
+    conda create -n pms_env python=10
     conda activate pms_env
     ```
 
@@ -47,8 +47,7 @@ A Python application that simulates human-like mouse movement from a starting po
     ```bash
     pip install -r requirements.txt
     # Or, if you prefer to install main packages via conda:
-    # conda install pillow numpy
-    # pip install pyautogui
+    # pip install pyautogui pillow numpy
     ```
 
 ## Usage
