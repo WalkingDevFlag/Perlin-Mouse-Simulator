@@ -95,6 +95,7 @@ The following parameters can be configured through the GUI:
 *   [ ] Option to save/load configurations.
 *   [ ] Click on canvas to set A and B points.
 *   [ ] Speed should not affect the movement based on perlin noise....i feel that it should be isolated from other factors but should also be affected by the Perlin Noise Map
+*   [ ] Maybe shift from PyAutoGUI to Ctypes
         
 
 
